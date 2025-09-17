@@ -7,7 +7,7 @@ class LoginService {
   Future<dynamic> login(String correo, String contrasenia) async {
     try {
       final response = await Dio().post(
-        service.urlLogin(correo, contrasenia),
+        service.urlLogin(),
         data: {'nomloginUsuario': correo, 'contraseniaUsuario': contrasenia},
         options: Options(headers: {'Content-Type': 'application/json'}),
       );

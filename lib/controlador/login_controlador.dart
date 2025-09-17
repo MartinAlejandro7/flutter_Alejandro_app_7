@@ -16,7 +16,6 @@ class LoginControlador {
 
       if (response is Map<String, dynamic>) {
         if (response.containsKey('error')) {
-          // ✅ IMPRIME EN CONSOLA QUE LA CONTRASEÑA ES INCORRECTA
           if (response['error'] == 'Credenciales inválidas') {
             print("==================================");
             print("❌ ERROR: Contraseña o usuario incorrecto");
@@ -34,7 +33,6 @@ class LoginControlador {
 
         Usuario user = Usuario.fromJson(response);
 
-        // ✅ IMPRIME LOS DATOS EN CONSOLA SI EL LOGIN ES EXITOSO
         print("==================================");
         print("✅ LOGIN EXITOSO");
         print("Cédula: ${user.cedulaUsuario}");
@@ -47,7 +45,6 @@ class LoginControlador {
       } else if (response is List && response.isNotEmpty) {
         Usuario user = Usuario.fromJson(response[0]);
 
-        // ✅ IMPRIME LOS DATOS EN CONSOLA
         print("==================================");
         print("✅ LOGIN EXITOSO");
         print("Cédula: ${user.cedulaUsuario}");
