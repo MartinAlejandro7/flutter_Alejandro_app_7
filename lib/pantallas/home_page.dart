@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
-
+  //  Pantalla de bienvenida después del login exitoso
   @override
   Widget build(BuildContext context) {
     return Scaffold(

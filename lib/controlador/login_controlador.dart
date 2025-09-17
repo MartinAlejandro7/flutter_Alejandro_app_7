@@ -30,7 +30,7 @@ class LoginControlador {
           _mostrarError(context, response['error']);
           return false;
         }
-
+        // Respuesta exitosa
         Usuario user = Usuario.fromJson(response);
 
         print("==================================");

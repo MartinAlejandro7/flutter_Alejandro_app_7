@@ -18,7 +18,7 @@ class Usuario {
     required this.contraseniaUsuario,
     required this.idRol,
   });
-
+  // Desde JSON
   factory Usuario.fromJson(Map<String, dynamic> json) {
     return Usuario(
       idUsuario: json['idUsuario'] as int,

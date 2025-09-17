@@ -172,6 +172,7 @@ class _RegistroPageState extends State<RegistroPage> {
     );
   }
 
+  // Validación de formulario
   bool _formIsValid() {
     if (_cedulaController.text.isEmpty ||
         _nombresController.text.isEmpty ||
