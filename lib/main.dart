@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_7/pantallas/login_page.dart';
+import 'package:flutter_application_7/pantallas/home_page.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
-/// Aplicación principal
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -14,7 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'App Login',
       debugShowCheckedModeBanner: false,
-      home: const LoginPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginPage(),
+        '/home': (context) => const HomePage(),
+      },
     );
   }
 }

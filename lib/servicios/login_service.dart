@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_application_7/servicios/api_service.dart';
 
-//  lib/servicios/login_service.dart
 class LoginService {
   ApiService service = ApiService();
 
@@ -15,6 +14,8 @@ class LoginService {
 
       if (response.statusCode == 200) {
         return response.data;
+      } else if (response.statusCode == 401) {
+        throw Exception('Credenciales inválidas');
       } else {
         throw Exception('Error en la respuesta del servidor');
       }

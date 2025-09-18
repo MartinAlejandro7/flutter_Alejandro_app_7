@@ -94,7 +94,6 @@ class _RegistroPageState extends State<RegistroPage> {
                         _idRolController.text,
                       );
 
-                      // ✅ LIMPIA LOS CAMPOS
                       _clearFields();
 
                       ScaffoldMessenger.of(context).showSnackBar(
@@ -104,8 +103,7 @@ class _RegistroPageState extends State<RegistroPage> {
                         ),
                       );
 
-                      // Opcional: vuelve al login automáticamente
-                      // Navigator.pop(context);
+                      Navigator.pop(context);
                     } catch (e) {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
@@ -172,7 +170,6 @@ class _RegistroPageState extends State<RegistroPage> {
     );
   }
 
-  // Validación de formulario
   bool _formIsValid() {
     if (_cedulaController.text.isEmpty ||
         _nombresController.text.isEmpty ||

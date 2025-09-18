@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_application_7/servicios/api_service.dart';
 
-// lib/servicios/registro_service.dart
 class RegistroService {
   ApiService service = ApiService();
 

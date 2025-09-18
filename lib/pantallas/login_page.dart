@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_7/controlador/login_controlador.dart';
-import 'package:flutter_application_7/pantallas/home_page.dart';
 import 'package:flutter_application_7/pantallas/registro_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -10,7 +9,6 @@ class LoginPage extends StatefulWidget {
   State<LoginPage> createState() => _LoginPageState();
 }
 
-/// Pantalla de login
 class _LoginPageState extends State<LoginPage> {
   final TextEditingController _usuarioController = TextEditingController();
   final TextEditingController _contraseniaController = TextEditingController();
@@ -116,12 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                       );
 
                       if (loginExitoso) {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const HomePage(),
-                          ),
-                        );
+                        Navigator.pushReplacementNamed(context, '/home');
                       }
                     },
                     style: ElevatedButton.styleFrom(
@@ -148,12 +141,7 @@ class _LoginPageState extends State<LoginPage> {
                       const Text('¿No tienes cuenta?'),
                       TextButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const RegistroPage(),
-                            ),
-                          );
+                          Navigator.pushNamed(context, '/registro');
                         },
                         child: const Text(
                           'Regístrate',

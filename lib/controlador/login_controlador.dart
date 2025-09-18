@@ -1,7 +1,6 @@
 import 'package:flutter_application_7/servicios/login_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_7/modelos/usuarios.dart';
-import 'package:flutter_application_7/pantallas/home_page.dart';
 
 class LoginControlador {
   final LoginService _loginService = LoginService();
@@ -30,7 +29,7 @@ class LoginControlador {
           _mostrarError(context, response['error']);
           return false;
         }
-        // Respuesta exitosa
+
         Usuario user = Usuario.fromJson(response);
 
         print("==================================");
